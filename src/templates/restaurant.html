@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Partenaire - Nengoo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<link rel="stylesheet" href="assets/css/restaurant.css">
+<body>
+    <header>
+        <div class="logo">Nengoo</div>
+        <nav class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="#">Restaurants</a>
+            <a href="#">Favoris</a>
+            <a href="#">Historique</a>
+        </nav>
+        <div class="user-actions">
+            <button class="btn btn-primary">Deconnexion</button>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <!-- Section Menu du Jour -->
+        <aside class="menu-du-jour">
+            <h2>Menu du Jour</h2>
+            <div class="menu-items" id="menuItems">
+                <!-- Les éléments seront ajoutés dynamiquement -->
+                <div class="empty-message">Aucun plat ajouté au menu du jour</div>
+            </div>
+        </aside>
+        
+        <!-- Section Plats du Restaurant -->
+        <main class="restaurant-plats">
+            <div class="restaurant-header">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Logo Restaurant" class="restaurant-logo">
+                <div class="restaurant-info">
+                    <h1>Le Gourmet Parisien</h1>
+                    <p>Cuisine française • $$ • 15-25 min</p>
+                    <p>123 Rue de la Gastronomie, Paris</p>
+                    <div class="rating">
+                        <span>★★★★★</span>
+                        <span>4.8 (124 avis)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="plats-container" id="platsContainer">
+                <!-- Plat 1 -->
+                <div class="plat-card">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Bœuf Bourguignon" class="plat-image">
+                    <div class="plat-details">
+                        <h3>Bœuf Bourguignon</h3>
+                        <p>Bœuf mijoté avec carottes, oignons et champignons dans une sauce au vin rouge</p>
+                        <div class="plat-footer">
+                            <span class="price">15,90 €</span>
+                            <button class="btn btn-primary add-to-menu" data-id="1" data-name="Bœuf Bourguignon" data-price="15.90">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Plat 2 -->
+                <div class="plat-card">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Confit de Canard" class="plat-image">
+                    <div class="plat-details">
+                        <h3>Confit de Canard</h3>
+                        <p>Cuisse de canard confite, pommes de terre sautées à l'ail et salade verte</p>
+                        <div class="plat-footer">
+                            <span class="price">18,50 €</span>
+                            <button class="btn btn-primary add-to-menu" data-id="2" data-name="Confit de Canard" data-price="18.50">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Plat 3 -->
+                <div class="plat-card">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Ratatouille Niçoise" class="plat-image">
+                    <div class="plat-details">
+                        <h3>Ratatouille Niçoise</h3>
+                        <p>Légumes du soleil mijotés, accompagnés de riz basmati</p>
+                        <div class="plat-footer">
+                            <span class="price">12,90 €</span>
+                            <button class="btn btn-primary add-to-menu" data-id="3" data-name="Ratatouille Niçoise" data-price="12.90">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Plat 4 -->
+                <div class="plat-card">
+                    <img src="https://images.unsplash.com/photo-1608212589631-123704ae8da1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Spaghetti Carbonara" class="plat-image">
+                    <div class="plat-details">
+                        <h3>Spaghetti Carbonara</h3>
+                        <p>Pâtes fraîches avec sauce à la crème, lardons et parmesan</p>
+                        <div class="plat-footer">
+                            <span class="price">11,90 €</span>
+                            <button class="btn btn-primary add-to-menu" data-id="4" data-name="Spaghetti Carbonara" data-price="11.90">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#">À propos</a>
+            <a href="#">Contact</a>
+            <a href="#">CGU</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Devenir partenaire</a>
+        </div>
+        <div class="copyright">© 2023 Nengoo - Tous droits réservés</div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItemsContainer = document.getElementById('menuItems');
+            const addButtons = document.querySelectorAll('.add-to-menu');
+            let menuItems = [];
+            
+            // Fonction pour afficher les éléments du menu
+            function displayMenuItems() {
+                if (menuItems.length === 0) {
+                    menuItemsContainer.innerHTML = '<div class="empty-message">Aucun plat ajouté au menu du jour</div>';
+                    return;
+                }
+                
+                menuItemsContainer.innerHTML = '';
+                
+                menuItems.forEach(item => {
+                    const menuItemElement = document.createElement('div');
+                    menuItemElement.className = 'menu-item';
+                    menuItemElement.dataset.id = item.id;
+                    
+                    menuItemElement.innerHTML = `
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">${item.name}</div>
+                            <div class="menu-item-price">${item.price} €</div>
+                        </div>
+                        <button class="btn btn-danger remove-from-menu">Supprimer</button>
+                    `;
+                    
+                    menuItemsContainer.appendChild(menuItemElement);
+                });
+            }
+            
+            // Ajouter un plat au menu
+            addButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = this.dataset.id;
+                    const name = this.dataset.name;
+                    const price = this.dataset.price;
+                    
+                    // Vérifier si le plat est déjà dans le menu
+                    if (!menuItems.some(item => item.id === id)) {
+                        menuItems.push({
+                            id,
+                            name,
+                            price
+                        });
+                        
+                        displayMenuItems();
+                        
+                        // Désactiver le bouton
+                        this.textContent = 'Ajouté';
+                        this.disabled = true;
+                        this.classList.remove('btn-primary');
+                        this.classList.add('btn-outline');
+                    }
+                });
+            });
+            
+            // Supprimer un plat du menu
+            menuItemsContainer.addEventListener('click', function(e) {
+                if (e.target.classList.contains('remove-from-menu')) {
+                    const menuItem = e.target.closest('.menu-item');
+                    const id = menuItem.dataset.id;
+                    
+                    // Retirer le plat du tableau
+                    menuItems = menuItems.filter(item => item.id !== id);
+                    
+                    // Réactiver le bouton correspondant
+                    const addButton = document.querySelector(`.add-to-menu[data-id="${id}"]`);
+                    if (addButton) {
+                        addButton.textContent = 'Ajouter';
+                        addButton.disabled = false;
+                        addButton.classList.remove('btn-outline');
+                        addButton.classList.add('btn-primary');
+                    }
+                    
+                    displayMenuItems();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

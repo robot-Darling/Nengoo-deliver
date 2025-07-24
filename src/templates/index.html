@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nengoo - Livraison de repas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <header>
+         <div class="head">
+            <div class="logo">Nengoo</div>
+                <nav class="nav-links">
+                    <a href="#">Accueil</a>
+                    <a href="restaurant.html">Restaurants</a>
+                    <a href="#">Favoris</a>
+                    <a href="#">Historique</a>
+                    </nav>
+                <div class="user-actions">
+                    <button class="btn btn-outline" id="toggleBtn_con">Connexion</button>
+                    <button class="btn btn-primary" id="toggleBtn">Inscription</button>
+                </div>
+        </div>
+    </header>
+        <div class="contain">
+            <div class="commande btn btn-primary">visualiser vos commandes
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
+                    <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9z"/>
+                    <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1zm1.038 3.018a6 6 0 0 1 .924 0 6 6 0 1 1-.924 0M0 3.5c0 .753.333 1.429.86 1.887A8.04 8.04 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5M13.5 1c-.753 0-1.429.333-1.887.86a8.04 8.04 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1"/>
+                </svg>
+            </div>
+        </div>
+    
+    
+    <div class="search-container">
+        <div class="search-bar">
+            <h2>Commandez vos plats préférés en quelques clics</h2>
+            <div class="search-input">
+                <input type="text" placeholder="Rechercher un restaurant ou un plat...">
+                <button>Rechercher</button>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+            <form action="" class="inscription" name="inscription">
+                <span><h2 class="logo">Nengoo <i class="sous-titre">inscription</i></h2></span>
+                <div class="group">
+                    <label for="name">Nom:</label>
+                    <input type="text" name="name" required class="input-form" placeholder="Enter your name or name fast food"/>
+                </div>
+                <div class="group">
+                    <label for="name">Tel:</label>
+                    <input type="number" name="tel" required class="input-form" placeholder="enter your tel..."/>
+                </div>
+                <div class="group">
+                    <label for="name">Adresse:</label>
+                    <input type="text" name="adress" required class="input-form" placeholder="enter your adress..."/>
+                </div>
+                 <div class="group">
+                    <label for="name">password:</label>
+                    <input type="password" name="password" required class="input-form" placeholder="enter your password..."/>
+                </div>
+                <div class="group">
+                    <label for="name">Statut:</label>
+                    <select name="status" required id="status">
+                        <option value="">...</option>
+                        <option value="1">Restaurant</option>
+                         <option value="2">client</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">envoyer</button>
+            </form>
+        </div>
+        <div class="con">
+             <form action="" class="connection inscription" name="connection">
+                <span><h2 class="logo">Nengoo <i class="sous-titre">Connexion</i></h2></span>
+               
+                <div class="group">
+                    <label for="name">Tel:</label>
+                    <input type="number" name="tel" required class="input-form" placeholder="enter your tel..."/>
+                </div>
+                 <div class="group">
+                    <label for="name">password:</label>
+                    <input type="password" name="password" required class="input-form" placeholder="enter your password..."/>
+                </div>
+                <button type="submit" class="btn btn-primary">connecter</button>
+            </form>
+        </div>
+
+           
+   
+    <div class="restaurants-container">
+        <h2 class="section-title">Restaurants partenaires</h2>
+        
+        <div class="restaurant-card">
+            <div class="restaurant-header">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Restaurant Logo" class="restaurant-logo">
+                <div class="restaurant-info">
+                    <h3>Le Gourmet Parisien</h3>
+                    <p>Cuisine française • $$ • 15-25 min</p>
+                    <div class="rating">
+                        <span>★★★★★</span>
+                        <span>4.8 (124 avis)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="meals-container">
+                <div class="meal-card">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Meal" class="meal-image">
+                    <div class="meal-details">
+                        <h4>Bœuf Bourguignon</h4>
+                        <p>Bœuf mijoté avec carottes, oignons et champignons dans une sauce au vin rouge</p>
+                        <div class="meal-footer">
+                            <span class="price">15,90 €</span>
+                            <button class="btn btn-primary">Commander</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="meal-card">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Meal" class="meal-image">
+                    <div class="meal-details">
+                        <h4>Confit de Canard</h4>
+                        <p>Cuisse de canard confite, pommes de terre sautées à l'ail et salade verte</p>
+                        <div class="meal-footer">
+                            <span class="price">18,50 €</span>
+                            <button class="btn btn-primary">Commander</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="meal-card">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Meal" class="meal-image">
+                    <div class="meal-details">
+                        <h4>Ratatouille Niçoise</h4>
+                        <p>Légumes du soleil mijotés, accompagnés de riz basmati</p>
+                        <div class="meal-footer">
+                            <span class="price">12,90 €</span>
+                            <button class="btn btn-primary">Commander</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="restaurant-card">
+            <div class="restaurant-header">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Restaurant Logo" class="restaurant-logo">
+                <div class="restaurant-info">
+                    <h3>La Pasta Bella</h3>
+                    <p>Cuisine italienne • $ • 10-20 min</p>
+                    <div class="rating">
+                        <span>★★★★☆</span>
+                        <span>4.5 (89 avis)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="meals-container">
+                <div class="meal-card">
+                    <img src="https://images.unsplash.com/photo-1608212589631-123704ae8da1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Meal" class="meal-image">
+                    <div class="meal-details">
+                        <h4>Spaghetti Carbonara</h4>
+                        <p>Pâtes fraîches avec sauce à la crème, lardons et parmesan</p>
+                        <div class="meal-footer">
+                            <span class="price">11,90 €</span>
+                            <button class="btn btn-primary">Commander</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="meal-card">
+                    <img src="https://images.unsplash.com/photo-1611270629569-8b357cb88da9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Meal" class="meal-image">
+                    <div class="meal-details">
+                        <h4>Pizza Margherita</h4>
+                        <p>Pâte fine, sauce tomate, mozzarella et basilic frais</p>
+                        <div class="meal-footer">
+                            <span class="price">10,50 €</span>
+                            <button class="btn btn-primary">Commander</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="meal-card">
+                    <img src="https://images.unsplash.com/photo-1625944515429-31b5f8dfef8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Meal" class="meal-image">
+                    <div class="meal-details">
+                        <h4>Lasagnes Bolognaise</h4>
+                        <p>Couches de pâtes avec viande hachée, sauce béchamel et fromage</p>
+                        <div class="meal-footer">
+                            <span class="price">13,20 €</span>
+                            <button class="btn btn-primary">Commander</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#">À propos</a>
+            <a href="#">Contact</a>
+            <a href="#">CGU</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Devenir partenaire</a>
+        </div>
+        <div class="copyright">© 2023 Nengoo - Tous droits réservés</div>
+    </footer>
+
+    <script>
+        //gestion du popup
+        const toggleBtn = document.getElementById('toggleBtn');
+        const toggleBtn_con = document.getElementById('toggleBtn_con');
+        const popupOverlay = document.querySelector('.form');
+        const popupOverlay_con = document.querySelector('.con');
+        const overlay = document.querySelector('.overlay');
+        overlay.style.display= 'none';
+        popupOverlay.style.display= 'none';
+        popupOverlay_con.style.display= 'none';
+        toggleBtn.addEventListener('click', function () {
+                if (popupOverlay.style.display === 'flex') {
+                   popupOverlay.style.display = 'none';
+                    overlay.style.display= 'none';
+                      document.body.style.overflow = 'scroll';
+                } else {
+                    popupOverlay.style.display = 'flex';
+                    popupOverlay_con.style.display = 'none';
+                    overlay.style.display= 'flex';
+                    document.body.style.overflow = 'hidden';
+                    
+                }
+            });
+        toggleBtn_con.addEventListener('click', function () {
+                if (popupOverlay_con.style.display === 'flex') {
+                   popupOverlay_con.style.display = 'none';
+                    overlay.style.display= 'none';
+                      document.body.style.overflow = 'scroll';
+                } else {
+                    popupOverlay_con.style.display = 'flex';
+                    popupOverlay.style.display = 'none';
+                    overlay.style.display= 'flex';
+                    document.body.style.overflow = 'hidden';
+                    
+                }
+            });
+       
+            overlay.addEventListener('click', function (){
+             popupOverlay.style.display = 'none';
+             popupOverlay_con.style.display = 'none';
+                    overlay.style.display= 'none';
+                      document.body.style.overflow = 'scroll';
+         });
+       
+        // Fonctionnalité de base
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gestion des boutons "Commander"
+            const orderButtons = document.querySelectorAll('.btn-primary');
+            orderButtons.forEach(button => {
+                if (button.textContent === 'Commander') {
+                    button.addEventListener('click', function() {
+                        const mealName = this.closest('.meal-card').querySelector('h4').textContent;
+                        const mealPrice = this.closest('.meal-card').querySelector('.price').textContent;
+                        alert(`Vous avez commandé : ${mealName}\nPrix : ${mealPrice}`);
+                    });
+                }
+            });
+            
+            // Gestion de la recherche
+            const searchButton = document.querySelector('.search-input button');
+            const searchInput = document.querySelector('.search-input input');
+            
+            searchButton.addEventListener('click', performSearch);
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') performSearch();
+            });
+            
+            function performSearch() {
+                if (searchInput.value.trim() !== '') {
+                    alert(`Recherche pour : ${searchInput.value}`);
+                    // Ici vous pourriez ajouter la logique de filtrage des restaurants/plats
+                }
+            }
+        });
+    </script>
+</body>
+</html>
