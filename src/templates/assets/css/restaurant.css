@@ -61,7 +61,11 @@
         .nav-links a:hover {
             color: var(--primary);
         }
-        
+         #active{
+            color: var(--primary);
+            font-weight: 800;
+            text-decoration: underline;
+        }
         .user-actions {
             display: flex;
             gap: 1rem;
